@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验靶场</title>
+    <link rel="icon" href="../../source/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="./css/labs.css">
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="../../index.html">🏠 首页</a></li>
+            <li class="active"><a href="./labs.html">🎯 靶场</a></li>
+            <li><a href="#">💬 论坛</a></li>
+            <li><a href="#">🛠️ 在线工具</a></li>
+        </ul>
+        <div class="users">
+            <div class="avatar-frame"></div>
+            <img src="../../source/hg.jpg" alt="logo" class="HeaderImg">
+            <span> ⚡用户中心</span>
+            <div class="userCenter">
+                <span class="username">EXmored</span>
+                <span class="level">LV:6 · 安全行者</span>
+                <ul class="userCenterList">
+                    <li><a href="#">📁 个人信息</a></li>
+                    <li><a href="#">⚙️ 设置</a></li>
+                    <li><a href="#">🚪 退出登入</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="inform">
+        <h2>全服通知:EXmored已加入安全行者组织!!!</h2>
+    </div>
+    <div class="container wrapper">
+        <div class="center_content">
+            <h2>实验靶场</h2>
+            <div class="search">
+            </div>
+            <table class="lab_item">
+                <tr>
+                    <th>编号</th>
+                    <th>实验靶场名称</th>
+                    <th>分数</th>
+                    <th>类型</th>
+                    <th>状态</th>
+                    <th>难度</th>
+                    <th></th>
+                </tr>
+                <tr class="Problem">
+                    <td>1</td>
+                    <td>SQL注入测试</td>
+                    <td>100分</td>
+                    <td><span>SQL注入</span><span>测试</span></td>
+                    <td>已开启</td>
+                    <td><span class="difficulty">易</span></td>
+                    <td><a href="#" class="StartBtn">开始挑战</a></td>
+                </tr>
+                <tr class="Problem">
+                    <td>2</td>
+                    <td>XSS攻击测试</td>
+                    <td>100分</td>
+                    <td><span>XSS攻击</span><span>测试</span></td>
+                    <td>已开启</td>
+                    <td><span class="difficulty">中</span></td>
+                    <td><a href="#" class="StartBtn">开始挑战</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="right_content">
+
+
+        </div>
+    </div>
+    <div class="setting">
+        <div class="setting_content">
+            <div class="title">设置</div>
+            <div class="setting_item">
+                <ol class="setting_list">
+                    <li class="active">主题</li>
+                    <li>通知</li>
+                    <li>语言</li>
+                    <li>其他</li>
+                </ol>
+                <ul class="all_setting">
+                    <li class="theme settingShow">
+                        <div class="eyeshield">
+                            护眼模式
+                            <div class="slideSwitch">
+                                <div class="cur_bg">
+                                    <div class="cur">关</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="notify">
+                        <div class="notify_item">
+                            全服通告
+                            <div class="slideSwitch">
+                                <div class="cur_bg">
+                                    <div class="cur">开</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="language">
+                        3
+                    </li>
+                    <li class="other">
+                        4
+                    </li>
+                </ul>
+            </div>
+            <div class="btn">
+                <button>应用</button>
+                <button>取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/header.js"></script>
+    <script>
+        window.addEventListener('load',()=>{
+            document.querySelectorAll('.difficulty').forEach(item=>{
+            if(item.textContent=='易'){
+                item.style.backgroundColor='#32b03f';
+            }
+            else if(item.textContent=='中'){
+                item.style.backgroundColor='#faa32b';
+            }
+            else if(item.textContent=='难'){
+                item.style.backgroundColor='#f64600';
+            }
+        })
+    })
+    </script>
+</body>
+</html>

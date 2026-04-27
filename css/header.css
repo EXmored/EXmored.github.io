@@ -1,0 +1,380 @@
+/* 头部导航栏 */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(45deg, #000000, #ff6464, #0096c8);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  width: 550px;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul li {
+  height: 46px;
+  border-radius: 40px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.header ul li a {
+  padding: 9.6px 22.4px;
+  text-align: center;
+  line-height: 46px;
+  color: #fff;
+}
+
+.header ul li:hover {
+  background-color: rgba(138, 125, 125, 0.15);
+}
+
+.header ul li:hover a {
+  color: #ffd966;
+}
+
+@media (max-width: 768px) {
+  .header ul li {
+    font-size: 18px;
+  }
+}
+
+.header ul .active a {
+  color: #ffd966;
+}
+
+.header .users {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 40px;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+
+.header .users .HeaderImg {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.header .users span {
+  display: block;
+  text-align: center;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header .users span {
+    display: none;
+  }
+}
+
+.header .users:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.header .users:hover .userCenter {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header .users .avatar-frame {
+  position: absolute;
+  top: 3px;
+  left: 9px;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 107, 107, 0.8);
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    border-color: rgba(255, 107, 107, 0.8);
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+    transform: scale(1);
+  }
+
+  50% {
+    border-color: rgba(78, 205, 196, 0.8);
+    box-shadow: 0 0 25px rgba(78, 205, 196, 0.8);
+    transform: scale(1.05);
+  }
+}
+
+.header .users .userCenter {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  top: 80px;
+  right: 0px;
+  width: 260px;
+  background-color: rgba(22, 32, 45, 0.98);
+  border-radius: 20px;
+  padding: 20px 0 12px 0;
+  z-index: 4;
+}
+
+.header .users .userCenter span {
+  display: block;
+  color: #ffd966;
+}
+
+.header .users .userCenter .username {
+  font-size: 22px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.header .users .userCenter .level {
+  width: 50%;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.header .users .userCenter .userCenterList {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header .users .userCenter .userCenterList li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.header .users .userCenter .userCenterList li a {
+  width: 90%;
+  height: 46px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px;
+  padding: 10px 22px;
+  text-align: left;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.header .users .userCenter .userCenterList li a::after {
+  text-align: right;
+  content: '→';
+  font-size: 0.9rem;
+  opacity: 0.6;
+  transition: transform 0.2s;
+}
+
+.header .users .userCenter .userCenterList li:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.header .users .userCenter .userCenterList li:hover a {
+  color: #ffd966;
+  transform: translateX(10px);
+  background-color: rgba(255, 180, 70, 0.2);
+}
+
+.inform {
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  background-color: rgba(159, 142, 142, 0.185);
+  overflow: hidden;
+}
+
+.inform h2{
+  width: auto;
+  font-size: 14px;
+  color: #000;
+  line-height: 30px;
+  transform: translateX(105%);
+  transition: all 15s linear;
+}
+
+/* 设置弹窗 */
+.setting {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: rgba(48, 152, 196, 0.2);
+    }
+
+    50% {
+        border-color: rgba(193, 137, 32, 0.776);
+    }
+
+    100% {
+        border-color: rgba(27, 110, 159, 0.2);
+    }
+}
+
+.setting .setting_content {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 24px 32px;
+    border: 4px solid rgba(42, 187, 160, 0.8);
+    backdrop-filter: blur(8px);
+    animation: borderColorChange 1.5s ease-in-out infinite;
+}
+
+.setting .setting_content .title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.setting .setting_content .setting_item {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.setting .setting_content .setting_item ol {
+    width: 100%;
+    display: flex;
+}
+
+.setting .setting_content .setting_item ol li {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+}
+
+.setting .setting_content .setting_item ol .active {
+    color: #ffb347;
+}
+
+.setting .setting_content .setting_item ul {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.setting .setting_content .setting_item ul li {
+    display: none;
+}
+
+.setting .setting_content .setting_item ul .theme .eyeshield {
+    display: flex;
+}
+
+.setting .setting_content .setting_item ul .notify .notify_item {
+    display: flex;
+}
+
+.setting .setting_content .setting_item ul .notify .notify_item .cur_bg {
+    transform: translateX(0px);
+}
+
+.setting .setting_content .setting_item ul .slideSwitch {
+    margin-left: 10px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.setting .setting_content .setting_item ul .slideSwitch .cur_bg {
+    display: flex;
+    background-color: skyblue;
+    width: 60px;
+    height: 30px;
+    transform: translateX(-31px);
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.setting .setting_content .setting_item ul .slideSwitch .cur_bg .cur {
+    transform: translateX(31px);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: #ffb347;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.setting .setting_content .setting_item ul .settingShow {
+    display: block;
+}
+
+.setting .setting_content .btn {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.setting .setting_content .btn button {
+    width: fit-content;
+    min-width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(120deg, #adc0d2, #ed934e);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.setting .setting_content .btn button:hover {
+    color: #ffb347;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #d4c1c1dc;
+}
+
+.footer .footer_text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

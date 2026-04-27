@@ -1,0 +1,105 @@
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.container .center_content {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  overflow: hidden;
+  width: 100%;
+}
+.container .center_content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .center_content table tr {
+  width: 100%;
+  height: 60px;
+}
+.container .center_content table th {
+  font-size: 20px;
+  padding: 5px;
+  border: 0px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+.container .center_content table th:nth-child(1) {
+  width: 10%;
+}
+.container .center_content table th:nth-child(2) {
+  width: 30%;
+}
+.container .center_content table th:nth-child(3) {
+  width: 10%;
+}
+.container .center_content table th:nth-child(4) {
+  width: 20%;
+}
+.container .center_content table th:nth-child(5) {
+  width: 10%;
+}
+.container .center_content table th:nth-child(6) {
+  width: 10%;
+}
+.container .center_content table th:nth-child(7) {
+  width: 10%;
+}
+.container .center_content table td {
+  padding: 5px;
+  border: 0px;
+}
+.container .center_content table td .difficulty {
+  display: block;
+  color: #fff;
+  width: 40px;
+  height: 24px;
+  text-align: center;
+  border-radius: 20px;
+}
+.container .center_content table .StartBtn {
+  color: #fff;
+  background-color: #2873eb;
+  padding: 10px;
+  border-radius: 20px;
+}
+.container .center_content table .Problem td:nth-child(1) {
+  font-size: 20px;
+}
+.container .center_content table .Problem td:nth-child(2) {
+  font-weight: bold;
+}
+.container .center_content table .Problem td:nth-child(3) {
+  font-size: 20px;
+}
+.container .center_content table .Problem td:nth-child(4) {
+  align-items: center;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.container .center_content table .Problem td:nth-child(4) span {
+  line-height: 20px;
+  cursor: text;
+  text-align: center;
+  font-size: 12px;
+  min-width: 60px;
+  color: #2e7eee;
+  font-weight: 700;
+  background-color: #2e7eee1a;
+  padding: 5px;
+  border-radius: 10px;
+}
+.container .center_content table .Problem td:nth-child(5) {
+  font-size: 20px;
+}
+.container .center_content table .Problem:hover {
+  background-color: #e0e0e0c3;
+}
