@@ -1,0 +1,70 @@
+.musicBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.musicBox .musicInfo {
+    flex: 4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.musicBox .musicInfo .prevMusic {
+    cursor: pointer;
+    margin-left: 10px;
+    flex: 1;
+    font-size: 20px;
+    color: #fff;
+}
+.musicBox .musicInfo .nextMusic {
+    cursor: pointer;
+    margin-left: 10px;
+    flex: 1;
+    font-size: 20px;
+    color: #fff;
+}
+
+.musicBox .musicInfo .MusicInfo {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.musicBox .musicInfo .title {
+    font-size: 14px;
+    color: #fff;
+}
+
+.musicBox .musicInfo .musicImg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: aqua;
+    transition: all 0.3s ease-in-out;
+}
+
+.musicBox .music{
+    flex: 1;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.playing {
+    animation: spin 7s linear infinite;
+}
