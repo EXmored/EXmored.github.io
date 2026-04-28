@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "結束バンド - Distortion!!",
+        "artist": "結束バンド",
+        "Img": "source/music/Distortion.jpg",
+        "url": "source/music/結束バンド - Distortion!!.mp3"
+    },
+    {
+        "id": 2,
+        "title": "結束バンド - あのバンド",
+        "artist": "結束バンド",
+        "Img": "source/music/あのバンド.jpg",
+        "url": "source/music/結束バンド - あのバンド!!.mp3"
+    }
+]
